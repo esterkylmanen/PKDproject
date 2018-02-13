@@ -22,6 +22,7 @@ startBoard = [	[(Empty 'A' 1), (Black 'A' 2), (Empty 'A' 3), (Black 'A' 4), (Emp
 				[(Empty 'I' 1), (White 'I' 2), (Empty 'I' 3), (White 'I' 4), (Empty 'I' 5), (White 'I' 6), (Empty 'I' 7), (White 'I' 8)], 
 				[(White 'J' 1), (Empty 'J' 2), (White 'J' 3), (Empty 'J' 4), (White 'J' 5), (Empty 'J' 6), (White 'J' 7), (Empty 'J' 8)] ]
 
+-- lägg också till "\n" efter varje lista
 showBoard :: Checkerboard -> String
 showBoard [] = []
 showBoard (x:xs) = showAux x ++ showBoard xs
@@ -29,7 +30,7 @@ showBoard (x:xs) = showAux x ++ showBoard xs
 showAux :: [Piece] -> String
 showAux [] = []
 showAux ((color char int):xs) 
-    | (color char int) == (Black _ _) = "|x" ++ "\n" ++ showAux xs
-    | (color char int) == (White _ _) = "|o" ++ "\n" ++ showAux xs
-    | otherwise = "| " ++ "\n" ++ showAux xs
+    | (color char int) == (Black _ _) = "|x" ++ showAux xs
+    | (color char int) == (White _ _) = "|o" ++ showAux xs
+    | otherwise = "| " ++ showAux xs
   
