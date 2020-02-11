@@ -1,4 +1,6 @@
-# PKDproject
+# Project Checkers in Haskell
+
+Project in Program Design and Data Structures 2017/2018
 
 Downloard Glasgow Haskell Compiler (GHC) to compile the Haskell file with the game. 
 
